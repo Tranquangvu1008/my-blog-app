@@ -1,8 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { useDispatch } from "react-redux";
+import { getAttributeRequest } from "./redux/test/action";
 
 function App() {
+  const dispacth = useDispatch();
+
+  useEffect(() => {
+    dispacth(getAttributeRequest(1, 2));
+  }, [dispacth]);
   return (
     <div className="App">
       <header className="App-header">
