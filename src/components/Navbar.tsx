@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                 {!fancy ?
                     <div className="container flex-lg-row flex-nowrap align-items-center" >
                         <div className="navbar-brand w-100">
-                            <a href="@@webRoot/index.html">
+                            <a href="./index.html">
                                 {!logoBoth &&
                                     !logoLight ?
                                     (<img src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}.png"
