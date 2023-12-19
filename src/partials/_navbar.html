@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-lg @@classList">
+<nav className="navbar navbar-expand-lg @@classList">
   @@if (!context.fancy) {
-    <div class="container flex-lg-row flex-nowrap align-items-center">
+    <div className="container flex-lg-row flex-nowrap align-items-center">
   }
   @@if (context.fancy) {
-    <div class="container">
-    <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
+    <div className="container">
+    <div className="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
   }
-    <div class="navbar-brand w-100">
+    <div className="navbar-brand w-100">
       <a href="@@webRoot/index.html">
         @@if (!context.logoBoth) {       
           @@if (!context.logoLight) {
@@ -17,17 +17,17 @@
           }
         }
         @@if (context.logoBoth) {
-          <img class="logo-dark" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}@2x.png 2x" alt="" />
-          <img class="logo-light" src="@@webRoot/assets/img/logo-light.png" srcset="@@webRoot/assets/img/logo-light@2x.png 2x" alt="" />
+          <img className="logo-dark" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}@2x.png 2x" alt="" />
+          <img className="logo-light" src="@@webRoot/assets/img/logo-light.png" srcset="@@webRoot/assets/img/logo-light@2x.png 2x" alt="" />
         }
       </a>
     </div>
-    <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-      <div class="offcanvas-header d-lg-none">
-        <h3 class="text-white fs-30 mb-0">Sandbox</h3>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+      <div className="offcanvas-header d-lg-none">
+        <h3 className="text-white fs-30 mb-0">Sandbox</h3>
+        <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+      <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
         @@if (!context.onePage && !context.onePageDemo) {
           @@if (!context.docs) {
             @@include('_menu-links.html')
@@ -42,7 +42,7 @@
         @@if (context.onePageDemo) {
           @@include('_menu-links-onepage-demo.html')
         }
-        <div class="offcanvas-footer d-lg-none">
+        <div className="offcanvas-footer d-lg-none">
           @@include('_menu-offcanvas-footer.html')
         </div>
         <!-- /.offcanvas-footer -->
