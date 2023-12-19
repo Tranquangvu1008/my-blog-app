@@ -10,7 +10,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
             <div className="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
                 <ul className="navbar-nav ms-lg-auto">
                     <li className="nav-item dropdown dropdown-mega">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Demos</a>
+                        <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Demos</a>
                         <ul className="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                             <li className="mega-menu-content mega-menu-scroll">
                                 <ul className="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
@@ -224,21 +224,21 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                         </ul>
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                        <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Pages</a>
                         <ul className="dropdown-menu">
-                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Services</a>
                                 <ul className="dropdown-menu">
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/services.html">Services I</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/services2.html">Services II</a></li>
                                 </ul>
                             </li>
-                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">About</a>
                                 <ul className="dropdown-menu">
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/about.html">About I</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/about2.html">About II</a></li>
                                 </ul>
                             </li>
-                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
+                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Shop</a>
                                 <ul className="dropdown-menu">
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/shop.html">Shop I</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/shop2.html">Shop II</a></li>
@@ -247,21 +247,21 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/shop-checkout.html">Checkout</a></li>
                                 </ul>
                             </li>
-                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Contact</a>
+                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Contact</a>
                                 <ul className="dropdown-menu">
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/contact.html">Contact I</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/contact2.html">Contact II</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/contact3.html">Contact III</a></li>
                                 </ul>
                             </li>
-                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Career</a>
+                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Career</a>
                                 <ul className="dropdown-menu">
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/career.html">Job Listing I</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/career2.html">Job Listing II</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/career-job.html">Job Description</a></li>
                                 </ul>
                             </li>
-                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Utility</a>
+                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Utility</a>
                                 <ul className="dropdown-menu">
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/404.html">404 Not Found</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/page-loader.html">Page Loader</a></li>
@@ -277,7 +277,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                         </ul>
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
+                        <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Projects</a>
                         <div className="dropdown-menu dropdown-lg">
                             <div className="dropdown-lg-content">
                                 <div>
@@ -307,12 +307,12 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                 <ul className="navbar-nav me-lg-auto">
 
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+                        <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Blog</a>
                         <ul className="dropdown-menu">
                             <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog.html">Blog without Sidebar</a></li>
                             <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog2.html">Blog with Sidebar</a></li>
                             <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog3.html">Blog with Left Sidebar</a></li>
-                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog Posts</a>
+                            <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Blog Posts</a>
                                 <ul className="dropdown-menu">
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog-post.html">Post without Sidebar</a></li>
                                     <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog-post2.html">Post with Sidebar</a></li>
@@ -322,7 +322,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                         </ul>
                     </li>
                     <li className="nav-item dropdown dropdown-mega">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blocks</a>
+                        <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Blocks</a>
                         <ul className="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                             <li className="mega-menu-content">
                                 <ul className="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled">
@@ -399,7 +399,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                         </ul>
                     </li>
                     <li className="nav-item dropdown dropdown-mega">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Documentation</a>
+                        <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Documentation</a>
                         <ul className="dropdown-menu mega-menu">
                             <li className="mega-menu-content">
                                 <div className="row gx-0 gx-lg-3">
@@ -468,7 +468,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                 <div className="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
                     <ul className="navbar-nav ms-lg-auto">
                         <li className="nav-item dropdown dropdown-mega">
-                            <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Demos</a>
+                            <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Demos</a>
                             <ul className="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                                 <li className="mega-menu-content mega-menu-scroll">
                                     <ul className="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
@@ -682,21 +682,21 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                            <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Pages</a>
                             <ul className="dropdown-menu">
-                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Services</a>
                                     <ul className="dropdown-menu">
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/services.html">Services I</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/services2.html">Services II</a></li>
                                     </ul>
                                 </li>
-                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">About</a>
                                     <ul className="dropdown-menu">
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/about.html">About I</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/about2.html">About II</a></li>
                                     </ul>
                                 </li>
-                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
+                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Shop</a>
                                     <ul className="dropdown-menu">
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/shop.html">Shop I</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/shop2.html">Shop II</a></li>
@@ -705,21 +705,21 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/shop-checkout.html">Checkout</a></li>
                                     </ul>
                                 </li>
-                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Contact</a>
+                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Contact</a>
                                     <ul className="dropdown-menu">
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/contact.html">Contact I</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/contact2.html">Contact II</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/contact3.html">Contact III</a></li>
                                     </ul>
                                 </li>
-                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Career</a>
+                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Career</a>
                                     <ul className="dropdown-menu">
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/career.html">Job Listing I</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/career2.html">Job Listing II</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/career-job.html">Job Description</a></li>
                                     </ul>
                                 </li>
-                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Utility</a>
+                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Utility</a>
                                     <ul className="dropdown-menu">
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/404.html">404 Not Found</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/page-loader.html">Page Loader</a></li>
@@ -735,7 +735,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
+                            <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Projects</a>
                             <div className="dropdown-menu dropdown-lg">
                                 <div className="dropdown-lg-content">
                                     <div>
@@ -765,12 +765,12 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                     <ul className="navbar-nav me-lg-auto">
 
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+                            <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Blog</a>
                             <ul className="dropdown-menu">
                                 <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog.html">Blog without Sidebar</a></li>
                                 <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog2.html">Blog with Sidebar</a></li>
                                 <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog3.html">Blog with Left Sidebar</a></li>
-                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog Posts</a>
+                                <li className="dropdown dropdown-submenu dropend"><a className="dropdown-item dropdown-toggle" href="/#" data-bs-toggle="dropdown">Blog Posts</a>
                                     <ul className="dropdown-menu">
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog-post.html">Post without Sidebar</a></li>
                                         <li className="nav-item"><a className="dropdown-item" href="@@webRoot/blog-post2.html">Post with Sidebar</a></li>
@@ -780,7 +780,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                             </ul>
                         </li>
                         <li className="nav-item dropdown dropdown-mega">
-                            <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blocks</a>
+                            <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Blocks</a>
                             <ul className="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                                 <li className="mega-menu-content">
                                     <ul className="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled">
@@ -857,7 +857,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                             </ul>
                         </li>
                         <li className="nav-item dropdown dropdown-mega">
-                            <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Documentation</a>
+                            <a className="nav-link dropdown-toggle" href="/#" data-bs-toggle="dropdown">Documentation</a>
                             <ul className="dropdown-menu mega-menu">
                                 <li className="mega-menu-content">
                                     <div className="row gx-0 gx-lg-3">

@@ -43,14 +43,14 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
                     <></>
                 }
                 {info &&
-                    <li className="nav-item"><a className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i className="uil uil-info-circle"></i></a></li>
+                    <li className="nav-item"><a href="/#" className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i className="uil uil-info-circle"></i></a></li>
                 }
                 {search &&
-                    <li className="nav-item"><a className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search"><i className="uil uil-search"></i></a></li>
+                    <li className="nav-item"><a href="/#" className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search"><i className="uil uil-search"></i></a></li>
                 }
                 {shop &&
                     <li className="nav-item">
-                        <a className="nav-link position-relative d-flex flex-row align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart">
+                        <a href="/#" className="nav-link position-relative d-flex flex-row align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart">
                             <i className="uil uil-shopping-cart"></i>
                             <span className="badge badge-cart bg-primary">3</span>
                         </a>
@@ -59,7 +59,7 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
                 {link &&
                     <li className="nav-item">
                         <a
-                            href={linkModal ? '#' : linkLink}
+                            href={linkModal ? '/#' : linkLink}
                             className="nav-link"
                             target={linksNewTab && '_blank'}
                             data-bs-toggle={linkModal && 'modal'}
@@ -72,7 +72,7 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
                 {btn &&
                     <li className="nav-item d-none d-md-block">
                         <a
-                            href={btnModal ? '#' : btnLink}
+                            href={btnModal ? '/#' : btnLink}
                             className={`btn ${btnClassList}`}
                             target={linksNewTab && '_blank'}
                             data-bs-toggle={btnModal && 'modal'}
@@ -84,10 +84,10 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
                 {social &&
                     <li className="nav-item">
                         <nav className="nav social social-muted justify-content-end text-end">
-                            <a href="#"><i className="uil uil-twitter"></i></a>
-                            <a href="#"><i className="uil uil-facebook-f"></i></a>
-                            <a href="#"><i className="uil uil-dribbble"></i></a>
-                            <a href="#"><i className="uil uil-instagram"></i></a>
+                            <a href="/#"><i className="uil uil-twitter"></i></a>
+                            <a href="/#"><i className="uil uil-facebook-f"></i></a>
+                            <a href="/#"><i className="uil uil-dribbble"></i></a>
+                            <a href="/#"><i className="uil uil-instagram"></i></a>
                         </nav>
                     </li>
                 }
