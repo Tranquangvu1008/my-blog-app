@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer6Widgets from "./components/Footer6Widgets";
 import PageProgress from "./components/PageProgress";
 import Scripts from "./components/Scripts";
+import './assets/scss/theme/_footer.scss';
 
 function App() {
   return <html lang="en">
