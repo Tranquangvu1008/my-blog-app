@@ -19,6 +19,8 @@ import photoF4 from "./assets/img/photos/f4.png";
 import photoF42x from "./assets/img/photos/f4@2x.png";
 import emailSvg from "./assets/img/icons/lineal/email.svg";
 
+import "./assets/css/colors/pink.css"
+
 function App() {
   return <div>
     <div className="content-wrapper">
