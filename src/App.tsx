@@ -24,14 +24,19 @@ import emailSvg from "./assets/img/icons/lineal/email.svg";
 function App() {
   return <div>
     <div className="content-wrapper">
+      {/* Navbar header */}
       <header className="wrapper bg-gray">
         <Navbar classList={"fancy navbar-light navbar-bg-light"} fancy={true} logoAlt={"logo-dark"} otherClassList={"w-100 d-flex ms-auto"} otherSocial={true} />
       </header>
+      {/* Avatar and text */}
       <section className="wrapper bg-gray">
         <div className="container pt-12 pt-md-14 pb-14 pb-md-16">
           <div className="row gy-10 gy-md-13 gy-lg-0 align-items-center">
             <div className="col-md-8 col-lg-5 d-flex position-relative mx-auto" data-cues="slideInDown" data-group="header">
-              <div className="img-mask mask-1"><img src={photoAbout17} srcSet={`${photoAbout172x} 2x`} alt="" /></div>
+              {/* Avatar */}
+              <div className="img-mask mask-1">
+                <img src={photoAbout17} srcSet={`${photoAbout172x} 2x`} alt="" />
+              </div>
               <div className="card shadow-lg position-absolute" style={{ bottom: '10%', right: '2%' }}>
                 <div className="card-body py-4 px-5">
                   <div className="d-flex flex-row align-items-center">
