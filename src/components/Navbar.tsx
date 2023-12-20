@@ -5,6 +5,12 @@ import MenuLinksOnePage from './MenuLinksOnePage';
 import MenuLinksOnePageDemo from './MenuLinksOnePageDemo';
 import MenuOffcanvasFooter from './MenuOffcanvasFooter';
 import MenuOthers from './MenuOthers';
+import logoAltSrc from '../assets/img/logo-dark.png';
+import logoAlt2xSrc from '../assets/img/logo-dark@2x.png';
+import logoSrc from '../assets/img/logo.png';
+import logo2xSrc from '../assets/img/logo@2x.png';
+import logoLightSrc from '../assets/img/logo-light.png';
+import logoLight2xSrc from '../assets/img/logo-light@2x.png';
 
 interface NavbarProps {
     classList?: any;
@@ -25,27 +31,26 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassList, otherSocial, logoBoth, logoLight, onePage, onePageDemo, docs, otherBtnModal,
-    otherLinkModal, otherShop, otherSearch }) => {
+    otherLinkModal, otherInfo, otherShop, otherSearch }) => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg @@classList">
+            <nav className={`navbar navbar-expand-lg ${classList}`}>
                 {!fancy ?
                     <div className="container flex-lg-row flex-nowrap align-items-center" >
+
                         <div className="navbar-brand w-100">
-                            <a href="./index.html">
+                            {/* Chuyen ve trang home */}
+                            <a href="/#">
                                 {!logoBoth &&
                                     !logoLight ?
-                                    (<img src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}.png"
-                                        srcSet="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}@2x.png 2x"
-                                        alt="" />)
-                                    : (<img src="@@webRoot/assets/img/logo-light.png" srcSet="@@webRoot/assets/img/logo-light@2x.png 2x" alt="" />)
+                                    (<img src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt='' />)
+                                    : (<img src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />)
 
                                 }
                                 {logoBoth &&
                                     <>
-                                        <img className="logo-dark" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}.png"
-                                            srcSet="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}@2x.png 2x" alt="" />
-                                        <img className="logo-light" src="@@webRoot/assets/img/logo-light.png" srcSet="@@webRoot/assets/img/logo-light@2x.png 2x" alt="" />
+                                        <img className='logo-dark' src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt="" />
+                                        <img className='logo-light' src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />
                                     </>
                                 }
                             </a>
@@ -76,43 +81,23 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                             </div>
                         </div>
                         <MenuOthers classList={otherClassList} />
-                        {/* @@include('_menu-others.html', {
-                                "classList": "@@otherClassList",
-                                "btn": "@@otherBtn",
-                                "btnClassList": "@@otherBtnClassList",
-                                "btnText": "@@otherBtnText",
-                                "btnLink": "@@otherBtnLink",
-                                "btnModal": "@@otherBtnModal",
-                                "link": "@@otherLink",
-                                "linkText": "@@otherLinkText",
-                                "linkLink": "@@otherLinkLink",
-                                "linkModal": "@@otherLinkModal",
-                                "linksNewTab": "@@otherLinksNewTab",
-                                "languageSelect": "@@otherLanguageSelect",
-                                "social": "@@otherSocial",
-                                "search": "@@otherSearch",
-                                "shop": "@@otherShop",
-                                "info": "@@otherInfo"
-                                }) */}
                     </div>
                     :
                     <div className="container" >
                         <div className="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center" >
                             <div className="navbar-brand w-100">
-                                <a href="@@webRoot/index.html">
+                                {/* Chuyen ve trang index */}
+                                <a href="/#">
                                     {!logoBoth &&
                                         !logoLight ?
-                                        (<img src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}.png"
-                                            srcSet="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}@2x.png 2x"
-                                            alt="" />)
-                                        : (<img src="@@webRoot/assets/img/logo-light.png" srcSet="@@webRoot/assets/img/logo-light@2x.png 2x" alt="" />)
+                                        (<img src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt='' />)
+                                        : (<img src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />)
 
                                     }
                                     {logoBoth &&
                                         <>
-                                            <img className="logo-dark" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}.png"
-                                                srcSet="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){logo}@2x.png 2x" alt="" />
-                                            <img className="logo-light" src="@@webRoot/assets/img/logo-light.png" srcSet="@@webRoot/assets/img/logo-light@2x.png 2x" alt="" />
+                                            <img className='logo-dark' src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt="" />
+                                            <img className='logo-light' src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />
                                         </>
                                     }
                                 </a>
@@ -130,40 +115,41 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                         <MenuLinkDocs />
                                     )
                                     }
-
                                     {onePage &&
+                                        // Fix
                                         <MenuLinksOnePage />
                                     }
                                     {onePageDemo &&
+                                        // Fix
                                         <MenuLinksOnePageDemo />
                                     }
                                     <div className="offcanvas-footer d-lg-none">
+                                        {/* Fix */}
                                         <MenuOffcanvasFooter />
                                     </div>
                                 </div>
                             </div>
-                            <MenuOthers classList={otherClassList} />
-                            {/* @@include('_menu-others.html', {
-                                "classList": "@@otherClassList",
-                                "btn": "@@otherBtn",
-                                "btnClassList": "@@otherBtnClassList",
-                                "btnText": "@@otherBtnText",
-                                "btnLink": "@@otherBtnLink",
-                                "btnModal": "@@otherBtnModal",
-                                "link": "@@otherLink",
-                                "linkText": "@@otherLinkText",
-                                "linkLink": "@@otherLinkLink",
-                                "linkModal": "@@otherLinkModal",
-                                "linksNewTab": "@@otherLinksNewTab",
-                                "languageSelect": "@@otherLanguageSelect",
-                                "social": "@@otherSocial",
-                                "search": "@@otherSearch",
-                                "shop": "@@otherShop",
-                                "info": "@@otherInfo"
-                                }) */}
-                        </div></div>}
-
+                            <MenuOthers classList={otherClassList} social={otherSocial} />
+                        </div>
+                    </div>
+                }
             </nav >
+            {otherBtnModal && otherLinkModal &&
+                //   @@include('_menu-others-modal.html')
+                <></>
+            }
+            {otherInfo &&
+                //   @@include('_menu-others-offcanvas-info.html')
+                <></>
+            }
+            {otherShop &&
+                //   @@include('_menu-others-cart.html')
+                <></>
+            }
+            {otherSearch &&
+                //   @@include('_menu-others-search.html')
+                <></>
+            }
         </>
     );
 }

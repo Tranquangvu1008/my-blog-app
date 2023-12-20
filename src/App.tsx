@@ -3,6 +3,23 @@ import Navbar from "./components/Navbar";
 import Footer6Widgets from "./components/Footer6Widgets";
 import PageProgress from "./components/PageProgress";
 import Scripts from "./components/Scripts";
+import photoAbout17 from "./assets/img/photos/about17.jpg";
+import photoAbout172x from "./assets/img/photos/about17@2x.jpg";
+import checkSvg from "./assets/img/icons/lineal/check.svg";
+import browserSvg from "./assets/img/icons/lineal/browser.svg";
+import smartPhoneSvg from "./assets/img/icons/lineal/smartphone.svg";
+import setting3Svg from "./assets/img/icons/lineal/settings-3.svg";
+import search2Svg from "./assets/img/icons/lineal/search-2.svg";
+import photoF1 from "./assets/img/photos/f1.png";
+import photoF12x from "./assets/img/photos/f1@2x.png";
+import photoF2 from "./assets/img/photos/f2.png";
+import photoF22x from "./assets/img/photos/f2@2x.png";
+import photoF3 from "./assets/img/photos/f3.png";
+import photoF32x from "./assets/img/photos/f3@2x.png";
+import photoF4 from "./assets/img/photos/f4.png";
+import photoF42x from "./assets/img/photos/f4@2x.png";
+import emailSvg from "./assets/img/icons/lineal/email.svg";
+
 
 function App() {
   return <div>
@@ -14,12 +31,12 @@ function App() {
         <div className="container pt-12 pt-md-14 pb-14 pb-md-16">
           <div className="row gy-10 gy-md-13 gy-lg-0 align-items-center">
             <div className="col-md-8 col-lg-5 d-flex position-relative mx-auto" data-cues="slideInDown" data-group="header">
-              <div className="img-mask mask-1"><img src="@@webRoot/assets/img/photos/about17.jpg" srcSet="@@webRoot/assets/img/photos/about17@2x.jpg 2x" alt="" /></div>
+              <div className="img-mask mask-1"><img src={photoAbout17} srcSet={`${photoAbout172x} 2x`} alt="" /></div>
               <div className="card shadow-lg position-absolute" style={{ bottom: '10%', right: '2%' }}>
                 <div className="card-body py-4 px-5">
                   <div className="d-flex flex-row align-items-center">
                     <div>
-                      <img src="@@webRoot/assets/img/icons/lineal/check.svg" className="svg-inject icon-svg icon-svg-sm text-primary mx-auto me-3" alt="" />
+                      <img src={checkSvg} className="svg-inject icon-svg icon-svg-sm text-primary mx-auto me-3" alt="" />
                     </div>
                     <div>
                       <h3 className="counter mb-0 text-nowrap">250+</h3>
@@ -70,22 +87,22 @@ function App() {
           </div>
           <div className="row gx-lg-8 gx-xl-12 gy-6 text-center">
             <div className="col-md-6 col-lg-3">
-              <img src="@@webRoot/assets/img/icons/lineal/browser.svg" className="svg-inject icon-svg icon-svg-md text-violet mb-3" alt="" />
+              <img src={browserSvg} className="svg-inject icon-svg icon-svg-md text-violet mb-3" alt="" />
               <h4>Web Design</h4>
               <p className="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
             </div>
             <div className="col-md-6 col-lg-3">
-              <img src="@@webRoot/assets/img/icons/lineal/smartphone.svg" className="svg-inject icon-svg icon-svg-md text-blue mb-3" alt="" />
+              <img src={smartPhoneSvg} className="svg-inject icon-svg icon-svg-md text-blue mb-3" alt="" />
               <h4>Mobile Design</h4>
               <p className="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
             </div>
             <div className="col-md-6 col-lg-3">
-              <img src="@@webRoot/assets/img/icons/lineal/settings-3.svg" className="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="" />
+              <img src={setting3Svg} className="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="" />
               <h4>Development</h4>
               <p className="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
             </div>
             <div className="col-md-6 col-lg-3">
-              <img src="@@webRoot/assets/img/icons/lineal/search-2.svg" className="svg-inject icon-svg icon-svg-md text-pink mb-3" alt="" />
+              <img src={search2Svg} className="svg-inject icon-svg icon-svg-md text-pink mb-3" alt="" />
               <h4>SEO</h4>
               <p className="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
             </div>
@@ -113,7 +130,7 @@ function App() {
                   <a href="/#" className="more hover link-violet">See Project</a>
                 </div>
                 <div className="col-lg-7 offset-lg-1 align-self-end">
-                  <figure><img className="img-fluid" src="@@webRoot/assets/img/photos/f1.png" srcSet="@@webRoot/assets/img/photos/f1@2x.png 2x" alt="" /></figure>
+                  <figure><img className="img-fluid" src={photoF1} srcSet={`${photoF12x} 2x`} alt="" /></figure>
                 </div>
               </div>
             </div>
@@ -128,7 +145,7 @@ function App() {
                   <a href="/#" className="more hover link-blue">See Project</a>
                 </div>
                 <div className="col-lg-7">
-                  <figure><img className="img-fluid" src="@@webRoot/assets/img/photos/f2.png" srcSet="@@webRoot/assets/img/photos/f2@2x.png 2x" alt="" /></figure>
+                  <figure><img className="img-fluid" src={photoF2} srcSet={`${photoF22x} 2x`} alt="" /></figure>
                 </div>
               </div>
             </div>
@@ -142,7 +159,7 @@ function App() {
                   <p>Maecenas faucibus mollis interdum sed posuere porta consectetur cursus porta lobortis. Scelerisque id ligula felis.</p>
                   <a href="/#" className="more hover link-leaf mb-8">See Project</a>
                 </div>
-                <img className="card-img-bottom" src="@@webRoot/assets/img/photos/f3.png" srcSet="@@webRoot/assets/img/photos/f3@2x.png 2x" alt="" />
+                <img className="card-img-bottom" src={photoF3} srcSet={`${photoF32x} 2x`} alt="" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -153,7 +170,7 @@ function App() {
                   <p>Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula porta felis euismod semper.</p>
                   <a href="/#" className="more hover link-pink mb-8">See Project</a>
                 </div>
-                <img className="card-img-bottom" src="@@webRoot/assets/img/photos/f4.png" srcSet="@@webRoot/assets/img/photos/f4@2x.png 2x" alt="" />
+                <img className="card-img-bottom" src={photoF4} srcSet={`${photoF42x} 2x`} alt="" />
               </div>
             </div>
           </div>
@@ -166,7 +183,7 @@ function App() {
           <div className="card-body p-12">
             <div className="row gx-md-8 gx-xl-12 gy-10">
               <div className="col-lg-6">
-                <img src="@@webRoot/assets/img/icons/lineal/email.svg" className="svg-inject icon-svg icon-svg-sm mb-4" alt="" />
+                <img src={emailSvg} className="svg-inject icon-svg icon-svg-sm mb-4" alt="" />
                 <h2 className="display-4 mb-3 pe-lg-10">If you like what you see, let's work together.</h2>
                 <p className="lead pe-lg-12 mb-0">I bring rapid solutions to make the life of my clients easier. Have any questions? Reach out to me from this contact form and I will get back to you shortly.</p>
               </div>
