@@ -1,6 +1,6 @@
 import React from "react";
 
-import IndexFirst from "./pages/index/index1";
+import IndexFirst from "./pages/Home/index1";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
