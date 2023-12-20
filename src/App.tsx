@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Footer6Widgets from "./components/Footer6Widgets";
 import PageProgress from "./components/PageProgress";
-import Scripts from "./components/Scripts";
 import photoAbout17 from "./assets/img/photos/about17.jpg";
 import photoAbout172x from "./assets/img/photos/about17@2x.jpg";
 import checkSvg from "./assets/img/icons/lineal/check.svg";
@@ -20,7 +19,6 @@ import photoF4 from "./assets/img/photos/f4.png";
 import photoF42x from "./assets/img/photos/f4@2x.png";
 import emailSvg from "./assets/img/icons/lineal/email.svg";
 
-
 function App() {
   return <div>
     <div className="content-wrapper">
@@ -34,7 +32,12 @@ function App() {
           <div className="row gy-10 gy-md-13 gy-lg-0 align-items-center">
             <div className="col-md-8 col-lg-5 d-flex position-relative mx-auto" data-cues="slideInDown" data-group="header">
               {/* Avatar */}
-              <div className="img-mask mask-1">
+              <div className="img-mask mask-1"
+              // style={{
+              //   animationName: "slideInDown", animationDuration: "700ms",
+              //   animationTimingFunction: "ease", animationDelay: "0ms", animationDirection: "normal", animationFillMode: "both"
+              // }}
+              >
                 <img src={photoAbout17} srcSet={`${photoAbout172x} 2x`} alt="" />
               </div>
               <div className="card shadow-lg position-absolute" style={{ bottom: '10%', right: '2%' }}>
@@ -245,7 +248,6 @@ function App() {
       </div>
     </footer>
     <PageProgress />
-    <Scripts />
   </div>;
 }
 
