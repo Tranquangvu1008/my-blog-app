@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import MenuLink from './MenuLink';
 import MenuLinkDocs from './docs/MenuLink';
@@ -38,6 +38,31 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassList, otherSocial, logoBoth, logoLight, onePage, onePageDemo, docs, otherBtnModal,
     otherLinkModal, otherInfo, otherShop, otherSearch }) => {
+    // Sticky Menu Area
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+    });
+    const isSticky = (e: any) => {
+        const header = document.querySelector('.navbar');
+        if (header) {
+
+            if (window.scrollY >= 150) {
+                header.classList.add('navbar-clone')
+                header.classList.add('fixed')
+                header.classList.add('navbar-stick')
+                header.classList.remove('navbar-unstick');
+            } else {
+                header.classList.remove('navbar-clone')
+                header.classList.remove('fixed')
+                header.classList.remove('navbar-stick');
+                header.classList.add('navbar-unstick')
+            }
+        }
+    };
+
     return (
         <>
             <nav className={`navbar navbar-expand-lg ${classList}`}>

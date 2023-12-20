@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer6Widgets from '../../components/Footer6Widgets';
 import Navbar from '../../components/Navbar';
 import PageProgress from '../../components/PageProgress';
@@ -18,6 +18,7 @@ import "../../assets/scss/style.scss";
 import "../../assets/css/colors/pink.css";
 
 const IndexFirst = () => {
+
     return (<div>
         <div className="content-wrapper">
             {/* Navbar header */}
