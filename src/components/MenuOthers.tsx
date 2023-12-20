@@ -1,4 +1,5 @@
 import React from 'react'
+import MenuOthersLang from './MenuOthersLang'
 
 interface MenuOthersProps {
     classList?: any
@@ -40,8 +41,7 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
             <div className={`navbar-other ${classList}`}>
                 <ul className="navbar-nav flex-row align-items-center ms-auto">
                     {languageSelect &&
-                        //   @@include('_menu-others-lang.html')
-                        <></>
+                        <MenuOthersLang />
                     }
                     {info &&
                         <li className="nav-item"><a href="/#" className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i className="uil uil-info-circle"></i></a></li>

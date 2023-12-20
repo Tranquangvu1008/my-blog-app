@@ -7,9 +7,6 @@ interface MenuLinksOnePageDemoProps {
 const MenuLinksOnePageDemo: React.FC<MenuLinksOnePageDemoProps> = ({ centerLogo }) => {
     return (<>
         {centerLogo ? (
-            <ul className="navbar-nav">
-            </ul>
-        ) : (
             <>
                 <div className="w-100 order-1 order-lg-0 d-lg-flex">
                     <ul className="navbar-nav ms-lg-auto">
@@ -24,7 +21,20 @@ const MenuLinksOnePageDemo: React.FC<MenuLinksOnePageDemoProps> = ({ centerLogo 
                         <li className="nav-item"><a className="nav-link scroll" href="#about">About</a></li>
                         <li className="nav-item"><a className="nav-link scroll" href="#pricing">Pricing</a></li>
                     </ul>
-                </div></>
+                </div>
+            </>
+        ) : (
+            <>
+                <ul className="navbar-nav">
+                    <li className="nav-item"><a className="nav-link scroll active" href="#home">Home</a></li>
+                    <li className="nav-item"><a className="nav-link scroll" href="#services">Services</a></li>
+                    <li className="nav-item"><a className="nav-link scroll" href="#portfolio">Portfolio</a></li>
+                    <li className="nav-item"><a className="nav-link scroll" href="#testimonials">Testimonials</a></li>
+                    <li className="nav-item"><a className="nav-link scroll" href="#about">About</a></li>
+                    <li className="nav-item"><a className="nav-link scroll" href="#pricing">Pricing</a></li>
+                </ul>
+
+            </>
         )
         }
     </>);

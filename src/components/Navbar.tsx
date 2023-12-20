@@ -1,4 +1,5 @@
 import React from 'react'
+
 import MenuLink from './MenuLink';
 import MenuLinkDocs from './docs/MenuLink';
 import MenuLinksOnePage from './MenuLinksOnePage';
@@ -11,6 +12,11 @@ import logoSrc from '../assets/img/logo.png';
 import logo2xSrc from '../assets/img/logo@2x.png';
 import logoLightSrc from '../assets/img/logo-light.png';
 import logoLight2xSrc from '../assets/img/logo-light@2x.png';
+import MenuOthersModal from './MenuOthersModal';
+import MenuOthersOffcanvasInfo from './MenuOthersOffcanvasInfo';
+import MenuOthersCart from './MenuOthersCart';
+import MenuOthersSearch from './MenuOthersSearch';
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {
     classList?: any;
@@ -40,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
 
                         <div className="navbar-brand w-100">
                             {/* Chuyen ve trang home */}
-                            <a href="/#">
+                            <Link to="/">
                                 {!logoBoth &&
                                     !logoLight ?
                                     (<img src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt='' />)
@@ -53,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                         <img className='logo-light' src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />
                                     </>
                                 }
-                            </a>
+                            </Link>
                         </div>
                         <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                             <div className="offcanvas-header d-lg-none">
@@ -87,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                         <div className="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center" >
                             <div className="navbar-brand w-100">
                                 {/* Chuyen ve trang index */}
-                                <a href="/#">
+                                <Link to="/">
                                     {!logoBoth &&
                                         !logoLight ?
                                         (<img src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt='' />)
@@ -100,7 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                             <img className='logo-light' src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />
                                         </>
                                     }
-                                </a>
+                                </Link>
                             </div>
                             <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                                 <div className="offcanvas-header d-lg-none">
@@ -116,15 +122,12 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                     )
                                     }
                                     {onePage &&
-                                        // Fix
                                         <MenuLinksOnePage />
                                     }
                                     {onePageDemo &&
-                                        // Fix
                                         <MenuLinksOnePageDemo />
                                     }
                                     <div className="offcanvas-footer d-lg-none">
-                                        {/* Fix */}
                                         <MenuOffcanvasFooter />
                                     </div>
                                 </div>
@@ -135,20 +138,16 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                 }
             </nav >
             {otherBtnModal && otherLinkModal &&
-                //   @@include('_menu-others-modal.html')
-                <></>
+                <MenuOthersModal />
             }
             {otherInfo &&
-                //   @@include('_menu-others-offcanvas-info.html')
-                <></>
+                <MenuOthersOffcanvasInfo />
             }
             {otherShop &&
-                //   @@include('_menu-others-cart.html')
-                <></>
+                <MenuOthersCart />
             }
             {otherSearch &&
-                //   @@include('_menu-others-search.html')
-                <></>
+                <MenuOthersSearch />
             }
         </>
     );
