@@ -26,7 +26,7 @@ const Blog = () => {
                     otherBtn={true}
                     otherBtnClassList={"btn-sm btn-primary rounded-pill"}
                     otherBtnText={"Contact"}
-                    otherBtnLink={"/contract"}
+                    otherBtnLink={"/contact"}
                 />
             </header>
             <section className="section-frame overflow-hidden">

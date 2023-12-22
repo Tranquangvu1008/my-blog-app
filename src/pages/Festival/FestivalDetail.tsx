@@ -19,7 +19,7 @@ const FestivalDetail = () => {
             <header className="wrapper bg-soft-primary">
                 <Navbar classList={"center-nav transparent navbar-light"} otherClassList={"w-100 d-flex ms-auto"}
                     otherLanguageSelect={true} otherBtn={true} otherBtnClassList={"btn-sm btn-primary rounded-pill"}
-                    otherBtnText={"Contact"} otherBtnLink={"/contract"} />
+                    otherBtnText={"Contact"} otherBtnLink={"/contact"} />
             </header>
             <section className="wrapper bg-soft-primary">
                 <div className="container pt-10 pb-19 pt-md-14 pb-md-22 text-center">

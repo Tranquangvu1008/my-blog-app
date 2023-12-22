@@ -27,7 +27,7 @@ const Festival = () => {
                     otherBtn={true}
                     otherBtnClassList={"btn-sm btn-primary rounded-pill"}
                     otherBtnText={"Contact"}
-                    otherBtnLink={"/contract"}
+                    otherBtnLink={"/contact"}
                 />
             </header>
             <section className="wrapper bg-light">

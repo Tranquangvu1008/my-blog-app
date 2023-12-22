@@ -208,6 +208,9 @@ const MenuLink: React.FC<MenuLinkProps> = ({ centerLogo, }) => {
                     <li className="nav-item">
                         <Link className="nav-link" to="/blog" data-bs-toggle="dropdown">Blog</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/contact" data-bs-toggle="dropdown">Contact</Link>
+                    </li>
                 </ul>
             </>
         )

@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuOthersLang from './MenuOthersLang'
+import { Link } from 'react-router-dom'
 
 interface MenuOthersProps {
     classList?: any
@@ -83,15 +84,15 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
                     }
                     {btn &&
                         <li className="nav-item d-none d-md-block">
-                            <a
-                                href={btnModal ? '/#' : btnLink}
+                            <Link
+                                to={btnModal ? '/#' : btnLink}
                                 className={`btn ${btnClassList}`}
                                 target={linksNewTab && '_blank'}
                                 data-bs-toggle={btnModal && 'modal'}
                                 data-bs-target={btnModal && btnLink}
                             >
                                 {btnText}
-                            </a>    </li>
+                            </Link>    </li>
                     }
                     {social &&
                         <li className="nav-item">
