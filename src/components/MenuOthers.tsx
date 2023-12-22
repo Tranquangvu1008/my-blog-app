@@ -18,6 +18,7 @@ interface MenuOthersProps {
     search?: any
     shop?: any
     info?: any
+    onClickSearch?: (value: any) => void;
 }
 
 const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
@@ -35,7 +36,13 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
     social,
     search,
     shop,
-    info, }) => {
+    info,
+    onClickSearch }) => {
+    const onClickActiveSearch = () => {
+        if (onClickSearch) {
+            onClickSearch(true);
+        }
+    }
     return (
         <>
             <div className={`navbar-other ${classList}`}>
@@ -47,7 +54,11 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
                         <li className="nav-item"><a href="/#" className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i className="uil uil-info-circle"></i></a></li>
                     }
                     {search &&
-                        <li className="nav-item"><a href="/#" className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search"><i className="uil uil-search"></i></a></li>
+                        <li className="nav-item">
+                            <button onClick={onClickActiveSearch} className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search">
+                                <i className="uil uil-search"></i>
+                            </button>
+                        </li>
                     }
                     {shop &&
                         <li className="nav-item">

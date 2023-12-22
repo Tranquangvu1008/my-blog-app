@@ -18,6 +18,9 @@ import "../../assets/scss/style.scss";
 import "../../assets/css/colors/pink.css";
 
 const IndexFirst = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (<div>
         <div className="content-wrapper">

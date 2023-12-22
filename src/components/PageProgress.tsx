@@ -9,7 +9,6 @@ const PageProgress = () => {
     });
     const isSticky = (e: any) => {
         var progressWrap = document.querySelector('.progress-wrap');
-        console.log("123", progressWrap)
         if (progressWrap != null) {
             var progressPath = document.querySelector('.progress-wrap path') as any;;
             if (progressPath) {

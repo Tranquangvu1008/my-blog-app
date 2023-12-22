@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import MenuLink from './MenuLink';
 import MenuLinkDocs from './docs/MenuLink';
@@ -19,7 +19,7 @@ import MenuOthersSearch from './MenuOthersSearch';
 import { Link } from 'react-router-dom';
 
 interface NavbarProps {
-    classList?: any;
+    classList?: string;
     fancy?: boolean;
     logoAlt?: any;
     otherClassList?: any;
@@ -34,10 +34,20 @@ interface NavbarProps {
     otherInfo?: any;
     otherShop?: any;
     otherSearch?: any;
+    otherLanguageSelect?: any;
+    otherBtn?: any;
+    otherBtnClassList?: any;
+    otherBtnText?: any;
+    otherBtnLink?: any;
+    otherLink?: any;
+    otherLinkText?: any;
+    otherLinkLink?: any;
+    otherLinksNewTab?: any;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassList, otherSocial, logoBoth, logoLight, onePage, onePageDemo, docs, otherBtnModal,
-    otherLinkModal, otherInfo, otherShop, otherSearch }) => {
+    otherLinkModal, otherInfo, otherShop, otherSearch, otherLanguageSelect, otherBtn, otherBtnClassList, otherBtnText, otherBtnLink,
+    otherLink, otherLinkText, otherLinkLink, otherLinksNewTab }) => {
     // Sticky Menu Area
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
@@ -60,9 +70,27 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                 header.classList.remove('navbar-stick');
                 header.classList.add('navbar-unstick')
             }
+
+            if (classList?.includes("navbar-dark")) {
+                if (window.scrollY >= 150) {
+                    header.classList.add('navbar-light')
+                    header.classList.remove('navbar-dark');
+                } else {
+                    header.classList.add('navbar-dark')
+                    header.classList.remove('navbar-light');
+                }
+            }
         }
     };
 
+    const [activeSearch, setActiveSearch] = useState(false);
+
+    const onClickSearch = (value: any) => {
+        setActiveSearch((prevActiveSearch) => value);
+    }
+    const onClickDisableSearch = (value: any) => {
+        setActiveSearch((prevActiveSearch) => value);
+    }
     return (
         <>
             <nav className={`navbar navbar-expand-lg ${classList}`}>
@@ -72,15 +100,13 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                         <div className="navbar-brand w-100">
                             {/* Chuyen ve trang home */}
                             <Link to="/">
-                                {!logoBoth &&
-                                    !logoLight ?
-                                    (<img src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt='' />)
-                                    : (<img src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />)
-
-                                }
-                                {logoBoth &&
+                                {!logoBoth ?
+                                    (!logoLight ?
+                                        (<img src={logoAlt ? logoAltSrc : logoSrc} srcSet={logoAlt ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt='' />)
+                                        : (<img src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />))
+                                    :
                                     <>
-                                        <img className='logo-dark' src={logoAltSrc ? logoAltSrc : logoSrc} srcSet={logoAltSrc ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt="" />
+                                        <img className='logo-dark' src={logoAlt ? logoAltSrc : logoSrc} srcSet={logoAlt ? `${logoAlt2xSrc} 2x` : `${logo2xSrc} 2x`} alt="" />
                                         <img className='logo-light' src={logoLightSrc} srcSet={`${logoLight2xSrc} 2x`} alt='' />
                                     </>
                                 }
@@ -99,7 +125,6 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                     <MenuLinkDocs />
                                 )
                                 }
-
                                 {onePage &&
                                     <MenuLinksOnePage />
                                 }
@@ -111,7 +136,12 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                 </div>
                             </div>
                         </div>
-                        <MenuOthers classList={otherClassList} />
+                        <MenuOthers classList={otherClassList} social={otherSocial} languageSelect={otherLanguageSelect}
+                            btn={otherBtn} btnClassList={otherBtnClassList} btnText={otherBtnText} btnLink={otherBtnLink}
+                            btnModal={otherBtnModal} link={otherLink} linkText={otherLinkText} linkLink={otherLinkLink}
+                            linkModal={otherLinkModal} linksNewTab={otherLinksNewTab} search={otherSearch} shop={otherShop}
+                            info={otherInfo} onClickSearch={onClickSearch} />
+
                     </div>
                     :
                     <div className="container" >
@@ -157,7 +187,11 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                     </div>
                                 </div>
                             </div>
-                            <MenuOthers classList={otherClassList} social={otherSocial} />
+                            <MenuOthers classList={otherClassList} social={otherSocial} languageSelect={otherLanguageSelect}
+                                btn={otherBtn} btnClassList={otherBtnClassList} btnText={otherBtnText} btnLink={otherBtnLink}
+                                btnModal={otherBtnModal} link={otherLink} linkText={otherLinkText} linkLink={otherLinkLink}
+                                linkModal={otherLinkModal} linksNewTab={otherLinksNewTab} search={otherSearch} shop={otherShop}
+                                info={otherInfo} onClickSearch={onClickSearch} />
                         </div>
                     </div>
                 }
@@ -172,7 +206,7 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                 <MenuOthersCart />
             }
             {otherSearch &&
-                <MenuOthersSearch />
+                <MenuOthersSearch activeSearch={activeSearch} onClickDisableSearch={onClickDisableSearch} />
             }
         </>
     );
