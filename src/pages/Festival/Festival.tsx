@@ -12,13 +12,34 @@ import cs21 from "../../assets/img/photos/cs21.jpg"
 import cs22 from "../../assets/img/photos/cs22.jpg"
 import { Link } from 'react-router-dom';
 
+import { motion } from 'framer-motion';
+
+
 
 const Festival = () => {
+    const sub = "Check out some of our awesome projects with creative ideas and great design.".split(" ");
+
+    const textVariants = {
+        hidden: {
+            opacity: 0,
+            x: -20,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
+            },
+        },
+    };
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<>
+    return (<motion.div initial="hidden"
+        animate="visible"
+        variants={textVariants}>
         <div className="content-wrapper">
             <header className="wrapper bg-light">
                 <Navbar classList={"center-nav transparent navbar-light"}
@@ -34,8 +55,26 @@ const Festival = () => {
                 <div className="container pt-10 pt-md-14 text-center">
                     <div className="row">
                         <div className="col-md-8 col-lg-7 col-xl-6 col-xxl-5 mx-auto">
-                            <h1 className="display-1 mb-3">Projects</h1>
-                            <p className="lead fs-lg px-lg-10 px-xxl-8">Check out some of our awesome projects with creative ideas and great design.</p>
+                            <h1 className="display-1 mb-3"><motion.span
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.25, duration: 0.5 }}
+                            >
+                                Projects
+                            </motion.span></h1>
+                            <p className="lead fs-lg px-lg-10 px-xxl-8">{sub.map((el, i) => (
+                                <motion.span
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{
+                                        duration: 0.25,
+                                        delay: i / 20
+                                    }}
+                                    key={i}
+                                >
+                                    {el}{" "}
+                                </motion.span>
+                            ))}</p>
                         </div>
                     </div>
                 </div>
@@ -203,7 +242,7 @@ const Festival = () => {
             </div>
         </footer>
         <PageProgress />
-    </>
+    </motion.div>
     );
 }
 

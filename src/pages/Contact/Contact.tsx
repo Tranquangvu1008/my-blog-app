@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageProgress from '../../components/PageProgress';
 import FooterWidgets from '../../components/FooterWidgets';
 import Navbar from '../../components/Navbar';
@@ -6,8 +6,30 @@ import Navbar from '../../components/Navbar';
 import bg25 from "../../assets/img/photos/bg25.png";
 import map from "../../assets/img/map.png";
 
+import { motion } from 'framer-motion';
+
 const Contact = () => {
-    return (<>
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const textVariants = {
+        hidden: {
+            opacity: 0,
+            x: -20,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
+            },
+        },
+    };
+
+    return (<motion.div initial="hidden"
+        animate="visible"
+        variants={textVariants}>
         <div className="content-wrapper">
             <header className="wrapper bg-soft-primary">
                 <Navbar classList="center-nav transparent position-absolute navbar-dark"
@@ -204,7 +226,7 @@ const Contact = () => {
 
         </footer>
         <PageProgress />
-    </>);
+    </motion.div>);
 }
 
 export default Contact;

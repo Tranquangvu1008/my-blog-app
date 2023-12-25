@@ -13,11 +13,35 @@ import b7 from "../../assets/img/photos/b7.jpg";
 import { Link } from 'react-router-dom';
 import SidebarWidgets from '../../components/SidebarWidgets';
 
+import { motion } from 'framer-motion';
+
 const Blog = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    return (<>
+
+    const containerVariants = {
+        hidden: {
+            opacity: 0,
+            x: -20,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
+            },
+        },
+    };
+
+    const textVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+    };
+
+    return (<motion.div variants={containerVariants}
+        initial="hidden"
+        animate="visible">
         <div className="content-wrapper">
             <header className="wrapper bg-soft-primary">
                 <Navbar classList={"center-nav navbar-light navbar-bg-light"}
@@ -34,8 +58,15 @@ const Blog = () => {
                     <div className="container py-12 py-md-16 text-center">
                         <div className="row">
                             <div className="col-md-7 col-lg-6 col-xl-5 mx-auto">
-                                <h1 className="display-1 mb-3">Business News</h1>
-                                <p className="lead px-lg-5 px-xxl-8 mb-1">Welcome to our journal. Here you can find the latest company news and business articles.</p>
+                                <h1 className="display-1 mb-3"><motion.span
+                                    variants={textVariants}
+                                >
+                                    Business News
+                                </motion.span></h1>
+
+                                <p className="lead px-lg-5 px-xxl-8 mb-1">
+                                    <motion.p variants={textVariants}>Welcome to our journal. Here you can find the latest company news and business articles.</motion.p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -272,7 +303,7 @@ const Blog = () => {
             </div>
         </footer>
         <PageProgress />
-    </>);
+    </motion.div>);
 }
 
 export default Blog;

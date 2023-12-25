@@ -17,12 +17,14 @@ import emailSvg from "../../assets/img/icons/lineal/email.svg";
 import "../../assets/scss/style.scss";
 import "../../assets/css/colors/pink.css";
 
+import { motion } from 'framer-motion';
+
 const IndexFirst = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    return (<div>
+    return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         <div className="content-wrapper">
             {/* Navbar header */}
             <header className="wrapper bg-gray">
@@ -778,7 +780,7 @@ const IndexFirst = () => {
             </div>
         </footer>
         <PageProgress />
-    </div>);
+    </motion.div>);
 }
 
 export default IndexFirst;
