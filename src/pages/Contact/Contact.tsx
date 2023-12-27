@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import PageProgress from '../../components/PageProgress';
-import FooterWidgets from '../../components/FooterWidgets';
-import Navbar from '../../components/Navbar';
+import PageProgress from 'components/PageProgress';
+import FooterWidgets from 'components/FooterWidgets';
+import Navbar from 'components/Navbar';
 
-import bg25 from "../../assets/img/photos/bg25.png";
-import map from "../../assets/img/map.png";
+import bg25 from "assets/img/photos/bg25.png";
+import map from "assets/img/map.png";
 
 import { motion } from 'framer-motion';
 

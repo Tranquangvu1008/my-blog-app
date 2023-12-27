@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react'
-import PageProgress from '../../components/PageProgress';
-import FooterWidgets from '../../components/FooterWidgets';
-import Navbar from '../../components/Navbar';
+import PageProgress from 'components/PageProgress';
+import FooterWidgets from 'components/FooterWidgets';
+import Navbar from 'components/Navbar';
 
-import b1 from "../../assets/img/photos/b1.jpg";
-import b2 from "../../assets/img/photos/b2.jpg";
-import b3 from "../../assets/img/photos/b3.jpg";
-import b4 from "../../assets/img/photos/b4.jpg";
-import b5 from "../../assets/img/photos/b5.jpg";
-import b6 from "../../assets/img/photos/b6.jpg";
-import b7 from "../../assets/img/photos/b7.jpg";
+import b1 from "assets/img/photos/b1.jpg";
+import b2 from "assets/img/photos/b2.jpg";
+import b3 from "assets/img/photos/b3.jpg";
+import b4 from "assets/img/photos/b4.jpg";
+import b5 from "assets/img/photos/b5.jpg";
+import b6 from "assets/img/photos/b6.jpg";
+import b7 from "assets/img/photos/b7.jpg";
 import { Link } from 'react-router-dom';
-import SidebarWidgets from '../../components/SidebarWidgets';
 
 import { motion } from 'framer-motion';
+import SidebarWidgets from 'components/SidebarWidgets';
 
 const Blog = () => {
     useEffect(() => {
@@ -34,9 +34,19 @@ const Blog = () => {
         },
     };
 
+
     const textVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
+        hidden: {
+            opacity: 0,
+            x: -20,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
+            },
+        },
     };
 
     return (<motion.div variants={containerVariants}
@@ -59,14 +69,13 @@ const Blog = () => {
                         <div className="row">
                             <div className="col-md-7 col-lg-6 col-xl-5 mx-auto">
                                 <h1 className="display-1 mb-3"><motion.span
-                                    variants={textVariants}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.25, duration: 0.5 }}
                                 >
                                     Business News
                                 </motion.span></h1>
-
-                                <p className="lead px-lg-5 px-xxl-8 mb-1">
-                                    <motion.p variants={textVariants}>Welcome to our journal. Here you can find the latest company news and business articles.</motion.p>
-                                </p>
+                                <motion.p className="lead px-lg-5 px-xxl-8 mb-1" variants={textVariants}>Welcome to our journal. Here you can find the latest company news and business articles.</motion.p>
                             </div>
                         </div>
                     </div>

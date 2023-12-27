@@ -1,31 +1,49 @@
 import React, { useEffect } from 'react'
-import PageProgress from '../../components/PageProgress';
-import FooterWidgets from '../../components/FooterWidgets';
-import SidebarWidgets from '../../components/SidebarWidgets';
-import Navbar from '../../components/Navbar';
+import PageProgress from 'components/PageProgress';
+import FooterWidgets from 'components/FooterWidgets';
+import SidebarWidgets from 'components/SidebarWidgets';
+import Navbar from 'components/Navbar';
 
-import b1 from "../../assets/img/photos/b1.jpg";
-import b4 from "../../assets/img/photos/b4.jpg";
-import b5 from "../../assets/img/photos/b5.jpg";
-import bg5 from "../../assets/img/photos/bg5.jpg";
-import b6 from "../../assets/img/photos/b6.jpg";
-import b7 from "../../assets/img/photos/b7.jpg";
-import b8 from "../../assets/img/photos/b8-full.jpg";
-import b9 from "../../assets/img/photos/b9-full.jpg";
-import b10 from "../../assets/img/photos/b10-full.jpg";
-import b11 from "../../assets/img/photos/b11-full.jpg";
-import avatarU1 from "../../assets/img/avatars/u1.jpg";
-import avatarU2 from "../../assets/img/avatars/u2.jpg";
-import avatarU3 from "../../assets/img/avatars/u3.jpg";
-import avatarU4 from "../../assets/img/avatars/u4.jpg";
-import avatarU5 from "../../assets/img/avatars/u5.jpg";
+import b1 from "assets/img/photos/b1.jpg";
+import b4 from "assets/img/photos/b4.jpg";
+import b5 from "assets/img/photos/b5.jpg";
+import bg5 from "assets/img/photos/bg5.jpg";
+import b6 from "assets/img/photos/b6.jpg";
+import b7 from "assets/img/photos/b7.jpg";
+import b8 from "assets/img/photos/b8-full.jpg";
+import b9 from "assets/img/photos/b9-full.jpg";
+import b10 from "assets/img/photos/b10-full.jpg";
+import b11 from "assets/img/photos/b11-full.jpg";
+import avatarU1 from "assets/img/avatars/u1.jpg";
+import avatarU2 from "assets/img/avatars/u2.jpg";
+import avatarU3 from "assets/img/avatars/u3.jpg";
+import avatarU4 from "assets/img/avatars/u4.jpg";
+import avatarU5 from "assets/img/avatars/u5.jpg";
 
+import { motion } from 'framer-motion';
 
 const BlogDetail = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    return (<>
+
+    const textVariants = {
+        hidden: {
+            opacity: 0,
+            screenY: -20,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+            },
+        },
+    };
+
+    return (<motion.div initial="hidden"
+        animate="visible"
+        variants={textVariants}>
         <div className="content-wrapper">
             <header className="wrapper bg-soft-primary">
                 <Navbar
@@ -395,7 +413,7 @@ const BlogDetail = () => {
             </div>
         </footer>
         <PageProgress />
-    </>);
+    </motion.div>);
 }
 
 export default BlogDetail;

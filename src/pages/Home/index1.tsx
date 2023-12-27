@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react'
-import Footer6Widgets from '../../components/Footer6Widgets';
-import Navbar from '../../components/Navbar';
-import PageProgress from '../../components/PageProgress';
-import photoAbout17 from "../../assets/img/photos/about17.jpg";
-import photoAbout172x from "../../assets/img/photos/about17@2x.jpg";
-import photoF1 from "../../assets/img/photos/f1.png";
-import photoF12x from "../../assets/img/photos/f1@2x.png";
-import photoF2 from "../../assets/img/photos/f2.png";
-import photoF22x from "../../assets/img/photos/f2@2x.png";
-import photoF3 from "../../assets/img/photos/f3.png";
-import photoF32x from "../../assets/img/photos/f3@2x.png";
-import photoF4 from "../../assets/img/photos/f4.png";
-import photoF42x from "../../assets/img/photos/f4@2x.png";
-import emailSvg from "../../assets/img/icons/lineal/email.svg";
+import Footer6Widgets from 'components/Footer6Widgets';
+import Navbar from 'components/Navbar';
+import PageProgress from 'components/PageProgress';
+import photoAbout17 from "assets/img/photos/about17.jpg";
+import photoAbout172x from "assets/img/photos/about17@2x.jpg";
+import photoF1 from "assets/img/photos/f1.png";
+import photoF12x from "assets/img/photos/f1@2x.png";
+import photoF2 from "assets/img/photos/f2.png";
+import photoF22x from "assets/img/photos/f2@2x.png";
+import photoF3 from "assets/img/photos/f3.png";
+import photoF32x from "assets/img/photos/f3@2x.png";
+import photoF4 from "assets/img/photos/f4.png";
+import photoF42x from "assets/img/photos/f4@2x.png";
+import emailSvg from "assets/img/icons/lineal/email.svg";
 
-import "../../assets/scss/style.scss";
-import "../../assets/css/colors/pink.css";
+import "assets/scss/style.scss";
+import "assets/css/colors/pink.css";
 
 import { motion } from 'framer-motion';
 

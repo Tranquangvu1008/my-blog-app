@@ -1,23 +1,21 @@
 import React, { useEffect } from 'react'
-import PageProgress from '../../components/PageProgress';
-import Navbar from '../../components/Navbar';
-import FooterWidgets from '../../components/FooterWidgets';
+import PageProgress from 'components/PageProgress';
+import Navbar from 'components/Navbar';
+import FooterWidgets from 'components/FooterWidgets';
 
-import cs16 from "../../assets/img/photos/cs16.jpg"
-import cs17 from "../../assets/img/photos/cs17.jpg"
-import cs18 from "../../assets/img/photos/cs18.jpg"
-import cs19 from "../../assets/img/photos/cs19.jpg"
-import cs20 from "../../assets/img/photos/cs20.jpg"
-import cs21 from "../../assets/img/photos/cs21.jpg"
-import cs22 from "../../assets/img/photos/cs22.jpg"
+import cs16 from "assets/img/photos/cs16.jpg"
+import cs17 from "assets/img/photos/cs17.jpg"
+import cs18 from "assets/img/photos/cs18.jpg"
+import cs19 from "assets/img/photos/cs19.jpg"
+import cs20 from "assets/img/photos/cs20.jpg"
+import cs21 from "assets/img/photos/cs21.jpg"
+import cs22 from "assets/img/photos/cs22.jpg"
 import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 
-
-
 const Festival = () => {
-    const sub = "Check out some of our awesome projects with creative ideas and great design.".split(" ");
+    const sub = "Check out some of our awesome projects with creative ideas and great design.";
 
     const textVariants = {
         hidden: {
@@ -62,19 +60,21 @@ const Festival = () => {
                             >
                                 Projects
                             </motion.span></h1>
-                            <p className="lead fs-lg px-lg-10 px-xxl-8">{sub.map((el, i) => (
-                                <motion.span
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{
-                                        duration: 0.25,
-                                        delay: i / 20
-                                    }}
-                                    key={i}
-                                >
-                                    {el}{" "}
-                                </motion.span>
-                            ))}</p>
+                            <motion.p className="lead fs-lg px-lg-10 px-xxl-8" variants={textVariants}>{sub}
+                                {/* {sub.map((el, i) => (
+                                    <motion.span
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{
+                                            duration: 0.25,
+                                            delay: i / 20
+                                        }}
+                                        key={i}
+                                    >
+                                        {el}{" "}
+                                    </motion.span>
+                                ))} */}
+                            </motion.p>
                         </div>
                     </div>
                 </div>

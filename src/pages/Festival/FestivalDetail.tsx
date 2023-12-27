@@ -1,20 +1,38 @@
 import React, { useEffect } from 'react'
-import PageProgress from '../../components/PageProgress'
-import FooterWidgets from '../../components/FooterWidgets'
-import Navbar from '../../components/Navbar';
+import PageProgress from 'components/PageProgress'
+import FooterWidgets from 'components/FooterWidgets'
+import Navbar from 'components/Navbar';
 
-import pp1 from "../../assets/img/photos/pp1.jpg";
-import pp2 from "../../assets/img/photos/pp2.jpg";
-import pp3 from "../../assets/img/photos/pp3.jpg";
-import pp4 from "../../assets/img/photos/pp4.jpg";
-import pp5 from "../../assets/img/photos/pp5.jpg";
+import pp1 from "assets/img/photos/pp1.jpg";
+import pp2 from "assets/img/photos/pp2.jpg";
+import pp3 from "assets/img/photos/pp3.jpg";
+import pp4 from "assets/img/photos/pp4.jpg";
+import pp5 from "assets/img/photos/pp5.jpg";
 
+import { motion } from 'framer-motion';
 
 const FestivalDetail = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    return (<>
+
+    const textVariants = {
+        hidden: {
+            opacity: 0,
+            screenY: -20,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+            },
+        },
+    };
+
+    return (<motion.div initial="hidden"
+        animate="visible"
+        variants={textVariants}>
         <div className="content-wrapper">
             <header className="wrapper bg-soft-primary">
                 <Navbar classList={"center-nav transparent navbar-light"} otherClassList={"w-100 d-flex ms-auto"}
@@ -120,7 +138,7 @@ const FestivalDetail = () => {
             </div>
         </footer>
         <PageProgress />
-    </>
+    </motion.div>
     );
 }
 
