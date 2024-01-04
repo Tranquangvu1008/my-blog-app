@@ -101,7 +101,6 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
     useEffect(() => {
         var show = document.getElementById("show")
         var fade = document.getElementById("fadeBg");
-        // debugger
         if (show && fade) {
             if (activeLeftMenu) {
                 show.classList.add("show");

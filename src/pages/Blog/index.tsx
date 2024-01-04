@@ -56,7 +56,7 @@ const Blog = () => {
             <header className="wrapper bg-soft-primary">
                 <Navbar classList={"center-nav navbar-light navbar-bg-light"}
                     otherClassList={"w-100 d-flex ms-auto"}
-                    otherSearch={true}
+                    // otherSearch={true}
                     otherBtn={true}
                     otherBtnClassList={"btn-sm btn-primary rounded-pill"}
                     otherBtnText={"Contact"}

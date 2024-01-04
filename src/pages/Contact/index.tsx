@@ -153,8 +153,8 @@ const Contact = () => {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-select-wrapper mb-4">
-                                            <select className="form-select" id="form-select" name="department" required>
-                                                <option selected disabled value="">Select a department</option>
+                                            <select className="form-select" id="form-select" name="department" required defaultValue="">
+                                                <option disabled value="">Select a department</option>
                                                 <option value="Sales">Sales</option>
                                                 <option value="Marketing">Marketing</option>
                                                 <option value="Customer Support">Customer Support</option>
