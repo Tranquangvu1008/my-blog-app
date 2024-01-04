@@ -20,6 +20,7 @@ interface MenuOthersProps {
     shop?: any
     info?: any
     onClickSearch?: (value: any) => void;
+    onClickShow?: () => void;
 }
 
 const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
@@ -38,10 +39,17 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
     search,
     shop,
     info,
-    onClickSearch }) => {
+    onClickSearch,
+    onClickShow }) => {
     const onClickActiveSearch = () => {
         if (onClickSearch) {
             onClickSearch(true);
+        }
+    }
+
+    const onClickShowMenu = () => {
+        if (onClickShow) {
+            onClickShow();
         }
     }
     return (
@@ -105,7 +113,7 @@ const MenuOthers: React.FC<MenuOthersProps> = ({ classList,
                         </li>
                     }
                     <li className="nav-item d-lg-none">
-                        <button className="hamburger offcanvas-nav-btn"><span></span></button>
+                        <button onClick={onClickShowMenu} className="hamburger offcanvas-nav-btn"><span></span></button>
                     </li>
                 </ul >
             </div >

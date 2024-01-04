@@ -91,12 +91,45 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
     const onClickDisableSearch = (value: any) => {
         setActiveSearch((prevActiveSearch) => value);
     }
+
+    const [activeLeftMenu, setActiveLeftMenu] = useState(false);
+
+    const onClickShow = () => {
+        setActiveLeftMenu((prevActiveLeftMenu) => !prevActiveLeftMenu);
+    }
+
+    useEffect(() => {
+        var show = document.getElementById("show")
+        var fade = document.getElementById("fadeBg");
+        // debugger
+        if (show && fade) {
+            if (activeLeftMenu) {
+                show.classList.add("show");
+                fade.classList.add("offcanvas-backdrop", "fade", "show")
+                fade.addEventListener("click", onClickShow);
+            } else {
+                show.classList.add("hiding");
+                fade.classList.remove("offcanvas-backdrop", "fade", "show")
+                fade.removeEventListener("click", onClickShow);
+                setTimeout(() => {
+                    if (show) {
+                        show.classList.remove("show");
+                        show.classList.remove("hiding");
+                    }
+                }, 500);
+            }
+        }
+        return () => {
+            if (fade) {
+                fade.removeEventListener("click", onClickShow);
+            }
+        };
+    }, [activeLeftMenu])
     return (
         <>
             <nav className={`navbar navbar-expand-lg ${classList}`}>
                 {!fancy ?
                     <div className="container flex-lg-row flex-nowrap align-items-center" >
-
                         <div className="navbar-brand w-100">
                             {/* Chuyen ve trang home */}
                             <Link to="/">
@@ -112,10 +145,10 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                 }
                             </Link>
                         </div>
-                        <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                        <div id='show' className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                             <div className="offcanvas-header d-lg-none">
                                 <h3 className="text-white fs-30 mb-0">Sandbox</h3>
-                                <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                <button onClick={onClickShow} type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                                 {!onePage && !onePageDemo &&
@@ -140,7 +173,9 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                             btn={otherBtn} btnClassList={otherBtnClassList} btnText={otherBtnText} btnLink={otherBtnLink}
                             btnModal={otherBtnModal} link={otherLink} linkText={otherLinkText} linkLink={otherLinkLink}
                             linkModal={otherLinkModal} linksNewTab={otherLinksNewTab} search={otherSearch} shop={otherShop}
-                            info={otherInfo} onClickSearch={onClickSearch} />
+                            info={otherInfo} onClickSearch={onClickSearch} onClickShow={onClickShow} />
+                        <div id='fadeBg' />
+                        {/* {activeLeftMenu && <div className="offcanvas-backdrop fade show" onClick={onClickShow}></div>} */}
 
                     </div>
                     :
@@ -163,10 +198,10 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                     }
                                 </Link>
                             </div>
-                            <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                            <div id='show' className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                                 <div className="offcanvas-header d-lg-none">
                                     <h3 className="text-white fs-30 mb-0">Sandbox</h3>
-                                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    <button onClick={onClickShow} type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
                                 <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                                     {!onePage && !onePageDemo &&
@@ -191,7 +226,9 @@ const Navbar: React.FC<NavbarProps> = ({ classList, fancy, logoAlt, otherClassLi
                                 btn={otherBtn} btnClassList={otherBtnClassList} btnText={otherBtnText} btnLink={otherBtnLink}
                                 btnModal={otherBtnModal} link={otherLink} linkText={otherLinkText} linkLink={otherLinkLink}
                                 linkModal={otherLinkModal} linksNewTab={otherLinksNewTab} search={otherSearch} shop={otherShop}
-                                info={otherInfo} onClickSearch={onClickSearch} />
+                                info={otherInfo} onClickSearch={onClickSearch} onClickShow={onClickShow} />
+                            <div id='fadeBg' />
+                            {/* {activeLeftMenu && <div className="offcanvas-backdrop fade show" onClick={onClickShow}></div>} */}
                         </div>
                     </div>
                 }
