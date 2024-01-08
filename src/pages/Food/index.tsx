@@ -126,24 +126,6 @@ const Food = () => {
                                         ))}
                                     </div>
                                 </div>
-                                {/* </div> */}
-                                {/* 
-                                    <div className="swiper-slide">
-                                        <figure className="rounded"><img src={cf2} alt="" /><a className="item-link" href={cf2} data-glightbox data-gallery="gallery-group"><i className="uil uil-focus-add"></i></a></figure>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <figure className="rounded"><img src={cf3} alt="" /><a className="item-link" href={cf3} data-glightbox data-gallery="gallery-group"><i className="uil uil-focus-add"></i></a></figure>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <figure className="rounded"><img src={cf4} alt="" /><a className="item-link" href={cf4} data-glightbox data-gallery="gallery-group"><i className="uil uil-focus-add"></i></a></figure>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <figure className="rounded"><img src={cf5} alt="" /><a className="item-link" href={cf5} data-glightbox data-gallery="gallery-group"><i className="uil uil-focus-add"></i></a></figure>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <figure className="rounded"><img src={cf6} alt="" /><a className="item-link" href={cf6} data-glightbox data-gallery="gallery-group"><i className="uil uil-focus-add"></i></a></figure>
-                                    </div> */}
-                                {/* </div> */}
                             </div>
                         </div>
                     </div>
