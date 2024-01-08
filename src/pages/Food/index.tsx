@@ -32,11 +32,11 @@ import pf11 from "assets/img/photos/pf11-full.jpg"
 import pf12 from "assets/img/photos/pf12-full.jpg"
 import pf13 from "assets/img/photos/pf13-full.jpg"
 import about30 from "assets/img/photos/about30.jpg"
-import logoAltSrc from '../../assets/img/logo-dark.png';
-import logoAlt2xSrc from '../../assets/img/logo-dark@2x.png';
+import logoAltSrc from 'assets/img/logo-dark.png';
+import logoAlt2xSrc from 'assets/img/logo-dark@2x.png';
 
-import "../../assets/css/fonts/urbanist.css"
-import "../../assets/css/colors/yellow.css"
+import "assets/css/fonts/urbanist.css"
+import "assets/css/colors/yellow.css"
 import "./index.scss"
 
 const Food = () => {
@@ -101,7 +101,7 @@ const Food = () => {
                             <div className="swiper overflow-visible">
                                 {/* <div className="swiper-wrapper"> */}
                                 {/* <div className="swiper-slide"> */}
-                                <div className='max-w-[80%] h-[750px] w-full m-auto py-10 px-4 relative group'>
+                                <div className='max-w-[80%] h-[80vh] w-full m-auto py-10 px-4 relative group'>
                                     <div
                                         style={{ backgroundImage: `url(${slideImages[currentIndex]})` }}
                                         className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
