@@ -6,19 +6,24 @@ export type ProductProps = {
 }
 
 const countReducer = (state: any, action: any) => {
-    console.log(state);
-    console.log(action);
-
-
-    if (action.type === "inc") {
+    // debugger;
+    if (action.type === "add") {
         return {
             product: {
                 data: [...state.product.data, { name: action.state.name, code: action.state.code }]
             }
-        }
+        };
+    } else if (action.type === "del") {
+        const updatedData = state.product.data.filter((item: any, index: any) => index !== action.index);
+        return {
+            product: {
+                data: updatedData
+            }
+        };
     }
     throw Error('Unknown action.');
-}
+};
+
 
 const Product = () => {
     const [list, setList] = useState<ProductProps[]>([]);
@@ -50,7 +55,7 @@ const Product = () => {
             <input ref={codeRef} id="code" defaultValue={"code"} />
             <button onClick={() => {
                 dispatch(
-                    { type: "inc", state: { name: nameRef.current?.value, code: codeRef.current?.value } }
+                    { type: "add", state: { name: nameRef.current?.value, code: codeRef.current?.value } }
                 )
             }}>Add</button>
             <table>
@@ -63,11 +68,14 @@ const Product = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {state.product.data && state.product.data.map((item, index) => {
+                    {state.product.data && state.product.data.map((item: any, index: any) => {
                         return <tr key={index}>
-                            <td>{++index}</td>
+                            <td>{index + 1}</td>
                             <td>{item.name}</td>
                             <td>{item.code}</td>
+                            <td><button onClick={() => {
+                                dispatch({ type: "del", index: index })
+                            }}>Delete</button></td>
                         </tr>
                     })}
                 </tbody>
