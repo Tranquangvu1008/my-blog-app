@@ -45,8 +45,8 @@ const Festival = () => {
                     otherLanguageSelect={true}
                     otherBtn={true}
                     otherBtnClassList={"btn-sm btn-primary rounded-pill"}
-                    otherBtnText={"Contact"}
-                    otherBtnLink={"/contact"}
+                    otherBtnText={"Login"}
+                    otherBtnLink={"/login"}
                 />
             </header>
             <section className="wrapper bg-light">

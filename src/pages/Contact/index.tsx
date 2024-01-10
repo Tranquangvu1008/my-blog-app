@@ -38,8 +38,8 @@ const Contact = () => {
                     otherLanguageSelect={true}
                     otherBtn={true}
                     otherBtnClassList={"btn-sm btn-white rounded-pill"}
-                    otherBtnText={"Contact"}
-                    otherBtnLink={"/contact"}
+                    otherBtnText={"Login"}
+                    otherBtnLink={"/login"}
                 />
             </header>
             <section className="wrapper image-wrapper bg-image bg-overlay bg-overlay-400 text-white" data-image-src={bg25}

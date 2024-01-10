@@ -9,6 +9,7 @@ import BlogDetail from "./pages/Blog/BlogDetail";
 import Contact from "./pages/Contact";
 import { AnimatePresence } from "framer-motion";
 import Food from "pages/Food";
+import Login from "pages/Login";
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,9 @@ function App() {
         } />
         <Route path="/food" element={
           <Food />
+        } />
+        <Route path="/login" element={
+          <Login />
         } />
       </Routes>
     </AnimatePresence>

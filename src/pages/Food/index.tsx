@@ -89,8 +89,8 @@ const Food = () => {
                     otherSearch={true}
                     otherBtn={true}
                     otherBtnClassList={"btn-sm btn-primary rounded-pill"}
-                    otherBtnText={"Contact"}
-                    otherBtnLink={"/contact"}
+                    otherBtnText={"Login"}
+                    otherBtnLink={"/login"}
                     logoAlt={true}
                 />
             </header>

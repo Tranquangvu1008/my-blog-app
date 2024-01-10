@@ -59,8 +59,8 @@ const Blog = () => {
                     // otherSearch={true}
                     otherBtn={true}
                     otherBtnClassList={"btn-sm btn-primary rounded-pill"}
-                    otherBtnText={"Contact"}
-                    otherBtnLink={"/contact"}
+                    otherBtnText={"Login"}
+                    otherBtnLink={"/login"}
                 />
             </header>
             <section className="section-frame overflow-hidden">

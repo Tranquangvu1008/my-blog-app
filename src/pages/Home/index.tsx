@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer6Widgets from 'components/Footer6Widgets';
 import Navbar from 'components/Navbar';
 import PageProgress from 'components/PageProgress';
@@ -18,11 +18,17 @@ import "assets/scss/style.scss";
 import "assets/css/colors/pink.css";
 
 import { motion } from 'framer-motion';
+import useEffectDidUpdate from 'utils/useEffectDidUpdate';
 
 const IndexFirst = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const [test, setTest] = useState(0);
+
+    useEffectDidUpdate(() => { setTest(1); console.log(test); }, test)
+
 
     return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         <div className="content-wrapper">
@@ -226,7 +232,7 @@ const IndexFirst = () => {
             </section>
             <section className="wrapper bg-light wrapper-border">
                 <div className="container py-14 py-md-18">
-                    <div className="row gx-lg-8 gx-xl-12 gy-6 mb-10">
+                    <div className="row gx-lg-8 gx-xl-12 gy-6 mb-10 px-10">
                         <div className="col-lg-6 order-lg-2">
                             <ul className="progress-list">
                                 <li>
@@ -404,8 +410,8 @@ const IndexFirst = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="row gx-lg-8 gx-xl-12 gy-6 text-center">
-                        <div className="col-md-6 col-lg-3">
+                    <div className="row gx-lg-8 gx-xl-12 gy-6 text-center px-10">
+                        <div className="col-md-6 col-lg-3 flex flex-col items-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 442.8"
@@ -444,7 +450,7 @@ const IndexFirst = () => {
                                 magnis.
                             </p>
                         </div>
-                        <div className="col-md-6 col-lg-3">
+                        <div className="col-md-6 col-lg-3 flex flex-col items-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 327.4 512"
@@ -488,7 +494,7 @@ const IndexFirst = () => {
                                 magnis.
                             </p>
                         </div>
-                        <div className="col-md-6 col-lg-3">
+                        <div className="col-md-6 col-lg-3 flex flex-col items-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 427.5"
@@ -519,7 +525,7 @@ const IndexFirst = () => {
                                 magnis.
                             </p>
                         </div>
-                        <div className="col-md-6 col-lg-3">
+                        <div className="col-md-6 col-lg-3 flex flex-col items-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 511.9"
@@ -551,7 +557,7 @@ const IndexFirst = () => {
                     </div>
                 </div>
             </section>
-            <section className="wrapper bg-light wrapper-border">
+            <section className="wrapper bg-light wrapper-border px-10">
                 <div className="container py-14 pt-md-18 pb-md-16">
                     <div className="row align-items-center mb-10">
                         <div className="col-md-8 col-lg-9 col-xl-8 col-xxl-7 pe-xl-20">
@@ -683,7 +689,7 @@ const IndexFirst = () => {
             </section>
         </div>
         <footer>
-            <div className="container pt-14 pt-md-18 pb-7">
+            <div className="container pt-14 pt-md-18 pb-7 px-10">
                 <div className="card bg-soft-primary mb-8">
                     <div className="card-body p-12">
                         <div className="row gx-md-8 gx-xl-12 gy-10">
