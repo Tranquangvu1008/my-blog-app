@@ -1,24 +1,24 @@
 import { LIST_STATUS_ACTION } from "../rootConstant";
-import { ATTRIBUTE_GET_ITEMS_REQUEST, ATTRIBUTE_GET_ITEMS_RESPONSE, } from "./constants";
-import { AttributeModel } from "./models";
- 
-export type ATTRIBUTE_STATE = {
+import { HOME_GET_PROFILE_REQUEST, HOME_GET_PROFILE_RESPONSE } from "./constants";
+import { HomeModel } from "./models";
+
+export type HOME_STATE = {
     attribute: {
-        data: AttributeModel[];
+        data: HomeModel[];
         status: string;
     };
 };
- 
-export const INIT_STATE: ATTRIBUTE_STATE = {
+
+export const INIT_STATE: HOME_STATE = {
     attribute: {
         data: [],
         status: LIST_STATUS_ACTION.LOADING,
     },
 };
- 
+
 const attributeReducer = (state = INIT_STATE, action: any) => {
     switch (action.type) {
-        case ATTRIBUTE_GET_ITEMS_REQUEST:
+        case HOME_GET_PROFILE_REQUEST:
             return {
                 ...state,
                 attribute: {
@@ -26,7 +26,7 @@ const attributeReducer = (state = INIT_STATE, action: any) => {
                     status: LIST_STATUS_ACTION.LOADING,
                 },
             };
-        case ATTRIBUTE_GET_ITEMS_RESPONSE:
+        case HOME_GET_PROFILE_RESPONSE:
             return {
                 ...state,
                 attribute: {
@@ -38,5 +38,5 @@ const attributeReducer = (state = INIT_STATE, action: any) => {
             return state;
     }
 };
- 
+
 export default attributeReducer;

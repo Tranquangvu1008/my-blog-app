@@ -1,11 +1,11 @@
 import { all } from 'redux-saga/effects';
-import watchFetchAttribute from './test/saga';
- 
+import watchFetchHome from './Home/saga';
+
 // Root saga
 function* rootSagas() {
     yield all([
-        watchFetchAttribute(),
+        watchFetchHome(),
     ]);
 }
- 
+
 export default rootSagas;

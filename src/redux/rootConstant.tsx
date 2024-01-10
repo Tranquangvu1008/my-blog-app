@@ -1,13 +1,7 @@
 export const API_URL = {
-    SERVER: 'https://run.mocky.io',
-    UNIT: {
-        GET_ALL: '/v3'
-    },
-    ATTRIBUTE: {
-        GET_ALL: "/Attributes"
-    },
-    SUPPLIER: {
-        GET_ALL: "/Suppliers"
+    SERVER: 'http://localhost:3001/api',
+    HOME: {
+        GET_ALL: "/profiles"
     }
 }
 
@@ -18,4 +12,3 @@ export const LIST_STATUS_ACTION = {
     EMPTY: 'EMPTY',
     CLIENT_UPDATE: 'CLIENT_UPDATE',
 };
- 

@@ -19,16 +19,53 @@ import "assets/css/colors/pink.css";
 
 import { motion } from 'framer-motion';
 import useEffectDidUpdate from 'utils/useEffectDidUpdate';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProfileRequest } from '../../redux/Home/action';
+import { RootState } from 'redux/rootReducer';
+
+type ProfileState = {
+    attributes: {
+        title: any;
+        description: any;
+        numOfProject: number;
+        introduce: any;
+        projects: Project[];
+    }
+}
+
+type Project = {
+    data: {
+        id: number;
+        attributes: {
+            name: any;
+            description: any;
+            numOfProcess: number;
+        }
+    }
+}
 
 const IndexFirst = () => {
+    const dispatch = useDispatch();
+    const dataApi = useSelector((state: RootState) => state.homeReducer.attribute.data)
+
     useEffect(() => {
         window.scrollTo(0, 0);
+
     }, []);
 
-    const [test, setTest] = useState(0);
+    useEffect(() => {
+        dispatch(getProfileRequest());
+    }, [dispatch])
 
-    useEffectDidUpdate(() => { setTest(1); console.log(test); }, test)
+    const [profile, setProfile] = useState<ProfileState | null>(null);
 
+    useEffectDidUpdate(() => {
+        if (dataApi) {
+            if (dataApi.data) {
+                setProfile(dataApi.data[0])
+            }
+        }
+    }, [dataApi])
 
     return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         <div className="content-wrapper">
@@ -143,7 +180,7 @@ const IndexFirst = () => {
                                     animationFillMode: "both",
                                 }}
                             >
-                                I'm User Interface Designer &amp; Developer.
+                                {profile && profile.attributes.title}
                             </h1>
                             {/* Content introduce */}
                             <p

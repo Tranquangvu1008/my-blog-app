@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import attributeReducer from './test/reducer';
+import homeReducer from './Home/reducer';
 
 const rootReducers = combineReducers({
-    attributeReducer,
+    homeReducer,
 });
- 
+
 export type RootState = ReturnType<typeof rootReducers>;
- 
+
 export default rootReducers;
