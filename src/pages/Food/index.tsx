@@ -36,7 +36,6 @@ import logoAltSrc from 'assets/img/logo-dark.png';
 import logoAlt2xSrc from 'assets/img/logo-dark@2x.png';
 
 import "assets/css/fonts/urbanist.css"
-import "assets/css/colors/yellow.css"
 import "./index.scss"
 
 const Food = () => {

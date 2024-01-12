@@ -76,7 +76,11 @@ const IndexFirst = () => {
                     fancy={true}
                     logoAlt={"logo-dark"}
                     otherClassList={"w-100 d-flex ms-auto"}
-                    otherSocial={true}
+                    // otherSocial={true}
+                    otherBtn={true}
+                    otherBtnClassList={"btn-sm btn-primary rounded-pill"}
+                    otherBtnText={"Login"}
+                    otherBtnLink={"/login"}
                 />
             </header>
             {/* Avatar and text */}
