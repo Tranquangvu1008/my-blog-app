@@ -26,25 +26,25 @@ const countReducer = (state: any, action: any) => {
 
 
 const Product = () => {
-    const [list, setList] = useState<ProductProps[]>([]);
+    // const [list, setList] = useState<ProductProps[]>([]);
     const nameRef = useRef<HTMLInputElement | null>(null)
     const codeRef = useRef<HTMLInputElement | null>(null)
 
     const [state, dispatch] = useReducer(countReducer, { product: { data: [] } });
 
-    const addNewProduct = () => {
-        if (nameRef.current && codeRef.current) {
-            const newName = nameRef.current.value;
-            const newCode = codeRef.current.value;
+    // const addNewProduct = () => {
+    //     if (nameRef.current && codeRef.current) {
+    //         const newName = nameRef.current.value;
+    //         const newCode = codeRef.current.value;
 
-            if (newName !== "" && newCode !== "") {
-                setList([...list, { name: newName, code: newCode }]);
-                // Reset input values
-                nameRef.current.value = "";
-                codeRef.current.value = "";
-            }
-        }
-    }
+    //         if (newName !== "" && newCode !== "") {
+    //             setList([...list, { name: newName, code: newCode }]);
+    //             // Reset input values
+    //             nameRef.current.value = "";
+    //             codeRef.current.value = "";
+    //         }
+    //     }
+    // }
 
 
     return (
